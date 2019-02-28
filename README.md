@@ -12,7 +12,7 @@ Our dataset is read-intensive. We do not consider our dataset write-intensive si
 Also the dataset will increase proportionally to time and active users so it would be better to create a system that uses technologies that provides partitioning and replication.
 
 ###### Dataset ([published.csv](/datasets/published.csv))
-The chosen dataset is a custom dataset composed by a manually generated part (which consist of ~300 real data entries) and a pseudo-random generated one (~25000 entries). The random generated part has followed these procedure:
+The chosen dataset is a custom dataset composed by a manually generated part (which consist of 225 real data entries) and a pseudo-random generated one (24775 entries). The random generated part has followed these procedure:
 
 - It generates random Latitude / Longitude point on earth (beside Antarctica).
 - It evaluates its nature (wheter on land or on water).
