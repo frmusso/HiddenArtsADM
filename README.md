@@ -11,7 +11,7 @@ Our dataset is read-intensive. We do not consider our dataset write-intensive si
 
 Also the dataset will increase proportionally to time and active users so it would be better to create a system that uses technologies that provides partitioning and replication.
 
-###### Dataset
+###### Dataset ([published.csv](/datasets/published.csv))
 The chosen dataset is a custom dataset composed by a manually generated part (which consist of ~300 real data entries) and a pseudo-random generated one (~25000 entries). The random generated part has followed these procedure:
 
 - It generates random Latitude / Longitude point on earth (beside Antarctica).
@@ -22,10 +22,18 @@ The chosen dataset is a custom dataset composed by a manually generated part (wh
 Users table are also initially random-generated.
 This allow us to generate a pseudo-real data whose weight is ~2.3 MBytes.
 
+Other csv files:
+
+- [unpublished.csv](/datasets/unpublished.csv): same structure as [published.csv](/datasets/published.csv) but it refers to the unpublished street arts, which means that they still are in the moderation queue (500 rows).
+
+- [users.csv](/datasets/users.csv): contains random generated users dataset (100 rows).
+
+- [devices.csv](/datasets/devices.csv): contains registered mobile devices dataset (53 rows).
+
 ###### How we evaluates land and water points
 You can check the details on the repository ~~HiddenArtsADM_Dataset_Generator~~ (soon to be added).
 
-## Structure
+## Project file structure
 - datasets: contains csv data
 - src: contains cql schema and population
 - ~~docs~~: contains documentation (soon to be added)
