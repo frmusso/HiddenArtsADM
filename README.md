@@ -2,7 +2,7 @@
 ## Contributors
 Hidden Arts has been developed by Francesco Musso ([@frmusso](https://github.com/frmusso)) and Davide Ponassi ([@ponassi](https://github.com/ponassi)).
 
-## Hidden Arts ADM
+## The project
 ###### Domain
 The domain is Street Arts. It is based on a mobile application which will provide detailed informations about street arts around the world. Street arts are shared by users that will take photo and fill an information form to be send to the database. The application will support Facebook and Google login and it will allow only one session per device.
 
@@ -24,3 +24,9 @@ This allow us to generate a pseudo-real data whose weight is ~2.3 MBytes.
 
 ###### How we evaluates land and water points
 You can check the details on the repository ~~HiddenArtsADM_Dataset_Generator~~ (soon to be added).
+
+## Structure
+- datasets: contains csv data
+- src: contains cql schema and population
+- ~~docs~~: contains documentation (soon to be added)
+- ~~workload~~: contains cql workload (soon to be added)
