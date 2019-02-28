@@ -11,7 +11,9 @@ Our dataset is read-intensive. We do not consider our dataset write-intensive si
 
 Also the dataset will increase proportionally to time and active users so it would be better to create a system that uses technologies that provides partitioning and replication.
 
-###### Dataset ([published.csv](/datasets/published.csv))
+We rely on Cassandra technology and CQL for workload.
+
+###### Main dataset ([published.csv](/datasets/published.csv))
 The chosen dataset is a custom dataset composed by a manually generated part (which consist of 225 real data entries) and a pseudo-random generated one (24775 entries). The random generated part has followed these procedure:
 
 - It generates random Latitude / Longitude point on earth (beside Antarctica).
@@ -34,7 +36,7 @@ This allow us to generate a pseudo-real data whose weight is ~2.3 MBytes.
 You can check the details on the repository ~~HiddenArtsADM_Dataset_Generator~~ (soon to be added).
 
 ## Project file structure
-- datasets: contains csv data
+- datasets: contains csv data which has been used to populate the database
 - src: contains cql schema and population
 - ~~docs~~: contains documentation (soon to be added)
 - ~~workload~~: contains cql workload (soon to be added)
