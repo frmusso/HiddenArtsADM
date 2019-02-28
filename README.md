@@ -22,7 +22,7 @@ The chosen dataset is a custom dataset composed by a manually generated part (wh
 Users table are also initially random-generated.
 This allow us to generate a pseudo-real data whose weight is ~2.3 MBytes.
 
-Other csv files:
+###### Other csv datasets
 
 - [unpublished.csv](/datasets/unpublished.csv): same structure as [published.csv](/datasets/published.csv) but it refers to the unpublished street arts, which means that they still are in the moderation queue (500 rows).
 
