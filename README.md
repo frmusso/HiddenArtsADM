@@ -26,11 +26,11 @@ This allow us to generate a pseudo-real data whose weight is ~2.3 MBytes.
 
 ###### Other csv datasets
 
-- [unpublished.csv](/datasets/unpublished.csv): same structure as [published.csv](/datasets/published.csv) but it refers to the unpublished street arts, which means that they still are in the moderation queue (500 rows).
+- [unpublished.csv](/datasets/unpublished.csv): same structure as [published.csv](/datasets/published.csv) but it refers to the unpublished street arts, which means that they still are in the moderation queue (5000 rows).
 
-- [users.csv](/datasets/users.csv): contains random generated users dataset (100 rows).
+- [users.csv](/datasets/users.csv): contains random generated users dataset (500 rows).
 
-- [devices.csv](/datasets/devices.csv): contains registered mobile devices dataset (53 rows).
+- [devices.csv](/datasets/devices.csv): contains registered mobile devices dataset (269 rows).
 
 ###### How we evaluates land and water points
 You can check the details on the repository ~~HiddenArtsADM_Dataset_Generator~~ (soon to be added).
