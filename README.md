@@ -39,7 +39,7 @@ This allow us to generate a pseudo-real data whose weight is ~2.3 MBytes.
 - [authorsPublished.csv](/datasets/authorsPublished.csv), [usersPublished.csv](/datasets/usersPublished.csv), [reportsPublished.csv](/datasets/reportsPublished.csv): these are tables needed to create joins in order to use our workload properly.
 
 ###### How we evaluates land and water points
-You can check the details on the repository ~~IsOnWater_CSharp~~ (soon to be added).
+You can check the details on the repository [IsOnWater_CSharp](https://github.com/frmusso/IsOnWater_CSharp).
 
 ## Project file structure
 - datasets: contains csv data which has been used to populate the database
