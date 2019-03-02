@@ -32,8 +32,14 @@ This allow us to generate a pseudo-real data whose weight is ~2.3 MBytes.
 
 - [devices.csv](/datasets/devices.csv): contains registered mobile devices dataset (269 rows).
 
+- [authors.csv](/datasets/authors.csv): contains random generated authors dataset (50 rows).
+
+- [reports.csv](/datasets/reports.csv): contains random generated reports from users with randomized statuses (100 rows).
+
+- [authorsPublished.csv](/datasets/authorsPublished.csv), [usersPublished.csv](/datasets/usersPublished.csv), [reportsPublished.csv](/datasets/reportsPublished.csv): these are tables needed to create joins in order to use our workload properly.
+
 ###### How we evaluates land and water points
-You can check the details on the repository ~~HiddenArtsADM_Dataset_Generator~~ (soon to be added).
+You can check the details on the repository ~~IsOnWater_CSharp~~ (soon to be added).
 
 ## Project file structure
 - datasets: contains csv data which has been used to populate the database
