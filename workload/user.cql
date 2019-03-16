@@ -1,15 +1,15 @@
--- 1) Given all the user’s information, create a unique account for an user (or remove)
+-- 1) Given all the user’s information, create a unique account for an user (or remove) -
 
 	INSERT INTO users (id, ban_expiry, banned, fb_token, gp_token, register_date) 
 	VALUES (501, 0, 0, '71678885163916348', '0', 1551597653000) IF NOT EXISTS;
   	
   	DELETE FROM users WHERE id = 501;
   	
--- 2) Log in, given the fb_token (or gp_token)
+-- 2) Log in, given the fb_token (or gp_token) -
 
 	SELECT * FROM users WHERE fb_token = '71678885163916348';
 
--- 3) Given the user ID, visualize the user’s account information
+-- 3) Given the user ID, visualize the user’s account information -
 
 	SELECT * FROM users WHERE id = 11;
 
