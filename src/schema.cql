@@ -44,7 +44,7 @@ CREATE TABLE ks_user4.unpublished (
     lat float,
     lng float,
     send_date timestamp,
-    confirmation_date timestamp -- da cancellare
+    confirmation_date timestamp -- da settare a zero nel dataset
 );
 
 CREATE TABLE ks_user4.reports (
