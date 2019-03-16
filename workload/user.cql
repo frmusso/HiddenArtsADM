@@ -29,7 +29,7 @@
 
 	SELECT * FROM authorsPublished WHERE author_id = 26;
 
--- 6) retrive the latest art of an author (possible using the secidx and order_by?? altrimenti potrebbe venire utile fare un'altra tabella per questo tipo di operazioni)
+-- 6) retrive the latest art of an author -
 
 	SELECT * FROM authorsPublished WHERE author_id = 28 LIMIT 1;
 
