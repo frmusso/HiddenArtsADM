@@ -1,18 +1,18 @@
--- 1) Given all the user’s information, create a unique account for an user (or remove)
+-- 1) Given all the user’s information, create a unique account for an user (or remove) -
 
 	INSERT INTO users (id, banned, fb_token, register_date) VALUES (501, 0, '71678885163916348', 1551597653000) IF NOT EXISTS;
   	
   	DELETE FROM users WHERE id = 501;
   	
--- 2) Log in, given the fb_token (or gp_token)
+-- 2) Log in, given the fb_token (or gp_token) -
 
 	SELECT * FROM users WHERE fb_token = '71678885163916348';
 
--- 3) Given the user ID, visualize the user’s account information
+-- 3) Given the user ID, visualize the user’s account information -
 
 	SELECT * FROM users WHERE id = 11;
 
--- 4) Given the id retrive the published info
+-- 4) Given the id retrive the published info -
 
 	SELECT * FROM published WHERE id = 411;
 
@@ -20,7 +20,7 @@
 
 	SELECT * FROM authorsPublished WHERE published_id = 411;
 
--- 5) Given the id retrive the author info
+-- 5) Given the id retrive the author info -
 
 	SELECT * FROM authors WHERE id = 26;
 
@@ -28,11 +28,11 @@
 
 	SELECT * FROM authorsPublished WHERE author_id = 26;
 
--- 6) retrive the latest art of an author (possible using the secidx and order_by?? altrimenti potrebbe venire utile fare un'altra tabella per questo tipo di operazioni)
+-- 6) retrive the latest art of an author -
 
 	SELECT * FROM authorsPublished WHERE author_id = 28 LIMIT 1;
 
--- 7) retrive the authors who are still active
+-- 7) retrive the authors who are still active -
 
 	SELECT * FROM authors WHERE status = 'ACTIVE';
 
