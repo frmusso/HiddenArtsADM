@@ -1,7 +1,6 @@
 -- 1) Given all the user’s information, create a unique account for an user (or remove)
 
-	INSERT INTO users (id, ban_expiry, banned, fb_token, gp_token, register_date) 
-	VALUES (501, 0, 0, '71678885163916348', '0', 1551597653000) IF NOT EXISTS;
+	INSERT INTO users (id, banned, fb_token, register_date) VALUES (501, 0, '71678885163916348', 1551597653000) IF NOT EXISTS;
   	
   	DELETE FROM users WHERE id = 501;
   	

@@ -55,21 +55,21 @@ CREATE TABLE ks_user4.reports (
 
 CREATE INDEX status_idx ON ks_user4.reports (status);
 
-CREATE TABLE ks_user4.authorsPublished ( -- conviene author_id, published confirmation date come primary e invece secidx published_id?? conviene separare le tabelle??
+CREATE TABLE ks_user4.authorsPublished (
     author_id int,
     author_name text,
     author_age int,
     author_gender text,
     author_status text,
-    published_id int PRIMARY KEY, --forse da rimuovere la primary key	
+    published_id int,
     published_title text,	
     published_description text,	
     published_lat float,	
     published_lng float,	
     published_send_date timestamp,	
     published_confirmation_date timestamp,
-    -- PRIMARY KEY((published_id), published_send_date)
-);  -- WITH CLUSTERING ORDER BY (published_send_date DESC);
+    PRIMARY KEY((published_id), published_send_date))
+    WITH CLUSTERING ORDER BY (published_send_date DESC);
 
 CREATE INDEX author_id_idx ON ks_user4.authorsPublished (author_id);
 
