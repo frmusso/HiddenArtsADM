@@ -16,7 +16,7 @@
 
 	SELECT * FROM published WHERE id = 411;
 
-	-- retrive the info of the author related to the street art 
+	-- retrive the info of the author related to the street art -
 
 	SELECT * FROM authorsPublished WHERE published_id = 411;
 
@@ -24,7 +24,7 @@
 
 	SELECT * FROM authors WHERE id = 26;
 
-	-- retrive all the authors' arts
+	-- retrive all the authors' arts -
 
 	SELECT * FROM authorsPublished WHERE author_id = 26;
 
@@ -55,11 +55,11 @@
 	--	INSERT INTO reportsPublished (id, description, status, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date)
 	--	VALUES (101, 'INCORRECT_NAME', 'AWAITING', datiiiii);
 
--- 10) opere published da user dopo una certa data o in una certa data --da aggiungere dati
+-- 10) opere published da user dopo una certa data o in un certo giorno -
 
-	SELECT * FROM usersPublished WHERE user_id = [] AND published_send_date = [];
+	SELECT * FROM usersPublished WHERE user_id = 348 AND published_send_date >= 1551446416000 AND published_send_date <= 1551456416000;
 
-	SELECT * FROM usersPublished WHERE user_id = [] AND published_send_date >= [];
+	SELECT * FROM usersPublished WHERE user_id = 40 AND published_send_date >= 0 ORDER BY published_send_date DESC;
 
 -- 11) selezionare tutte le opere nello stesso luogo es festival --da aggiungere dati
 

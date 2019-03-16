@@ -29,8 +29,7 @@
 
 	-- If compliant, at application level the data are copied for the insert
 
-	INSERT INTO published (id, title, description, lat, lng, send_date, confirmation_date)
-	VALUES (25001, 'Ginger barriers', 'Description example', 53.0067, 67.378, 1551456481000, 1551456596000);
+	INSERT INTO published (id, title, description, lat, lng, send_date, confirmation_date) VALUES (25001, 'Ginger barriers', 'Description example', 53.0067, 67.378, 1551456481000, 1551456596000);
 
 	--	INSERT INTO authorsPublished (author_id, author_name, author_age int, author_gender, author_status, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date)
 	--	VALUES (7, 'Pejac', 16, 'F', 'RETIRED', 25001, 'Ginger barriers', 'Description example', 53.0067, 67.378, 1551456481000, 1551456596000);

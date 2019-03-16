@@ -73,12 +73,12 @@ CREATE TABLE ks_user4.authorsPublished (
 
 CREATE INDEX author_id_idx ON ks_user4.authorsPublished (author_id);
 
-CREATE TABLE ks_user4.usersPublished (  -- inserire data in primary key
-    user_id int PRIMARY KEY,
-    ban_expiry timestamp,   ---
-    banned tinyint,         ---
-    user_fb_token text,     ---
-    user_gp_token text,     ---
+CREATE TABLE ks_user4.usersPublished (
+    user_id int,
+    ban_expiry timestamp,
+    banned tinyint,
+    user_fb_token text,
+    user_gp_token text,
     register_date timestamp,
     published_id int,	
     published_title text,	
@@ -87,7 +87,7 @@ CREATE TABLE ks_user4.usersPublished (  -- inserire data in primary key
     published_lng float,	
     published_send_date timestamp,	
     published_confirmation_date timestamp,
-    --PRIMARY KEY(user_id, published_send_date) oppure si deve mettere PRIMARY KEY((user_id), published_send_date)
+    PRIMARY KEY((user_id), published_send_date, published_id)
 );
 
 CREATE INDEX published_id_idx ON ks_user4.usersPublished (published_id);
