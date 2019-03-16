@@ -21,7 +21,7 @@
 
 	SELECT * FROM authorsPublished WHERE published_id = 411;
 
--- 5) Given the id retrive the author info
+-- 5) Given the id retrive the author info -
 
 	SELECT * FROM authors WHERE id = 26;
 
@@ -33,7 +33,7 @@
 
 	SELECT * FROM authorsPublished WHERE author_id = 28 LIMIT 1;
 
--- 7) retrive the authors who are still active
+-- 7) retrive the authors who are still active -
 
 	SELECT * FROM authors WHERE status = 'ACTIVE';
 
