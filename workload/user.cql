@@ -13,7 +13,7 @@
 
 	SELECT * FROM users WHERE id = 11;
 
--- 4) Given the id retrive the published info
+-- 4) Given the id retrive the published info -
 
 	SELECT * FROM published WHERE id = 411;
 
