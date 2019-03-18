@@ -147,6 +147,9 @@ CREATE TABLE ks_user4.festival ( -- i dati sono queli della tabella authorsPubli
     published_lng float,	
     published_send_date timestamp,	
     published_confirmation_date timestamp,
-    PRIMARY KEY((published_lat, published_lng), author_id, published_send_date)
-);  -- WITH CLUSTERING ORDER BY (published_send_date DESC); --possibile??
+    PRIMARY KEY((published_lat, published_lng), published_send_date, published_id))
+    WITH CLUSTERING ORDER BY (published_send_date DESC);
+
+    CREATE INDEX author_id_idx ON ks_user4.festival (author_id);
+
 

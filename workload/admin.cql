@@ -6,7 +6,7 @@
   	
   	DELETE FROM admin WHERE id = 201;
   	
--- 2) Log in, given the doctor ID and the current password
+-- 2) Log in, given the admin ID and the current password
 
 	-- The password validity is check at application level
 
