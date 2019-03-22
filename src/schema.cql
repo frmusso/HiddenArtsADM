@@ -104,21 +104,23 @@ CREATE TABLE ks_user4.authorsUnpublished (
     unpublished_lat float,	
     unpublished_lng float,	
     unpublished_send_date timestamp,	
+    unpublished_confirmation_date timestamp -- da settare a zero nel dataset
 );
 
 CREATE TABLE ks_user4.usersUnpublished (
     user_id int,
-    ban_expiry timestamp,   ---
-    banned tinyint,         ---
-    user_fb_token text,     ---
-    user_gp_token text,     ---
+    ban_expiry timestamp,   
+    banned tinyint,         
+    user_fb_token text,     
+    user_gp_token text,     
     register_date timestamp,
     unpublished_id int PRIMARY KEY,	
     unpublished_title text,	
     unpublished_description text,	
     unpublished_lat float,	
     unpublished_lng float,	
-    unpublished_send_date timestamp,	
+    unpublished_send_date timestamp,
+    unpublished_confirmation_date timestamp -- da settare a zero nel dataset	
 );
 
 CREATE TABLE ks_user4.reportsPublished (

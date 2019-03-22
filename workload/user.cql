@@ -8,6 +8,12 @@
 
 	SELECT * FROM users WHERE fb_token = '71678885163916348';
 
+	-- autologin/keeping user's session active
+
+	INSERT INTO devices (dtoken, user_id)  VALUES ('jUNweAKbsdfrcaUiKf0VkqRatGusYLi98c1zxSe7DFYso5TM5EBF78ztCcC8FRNIcgtAJUlsAsSe2YmYmiXTKcCAc7xUPG2lsPQHbTCKTJEePU1dqelWutxzesXbW0cu06mMIem3fMAB7XlSGU4bUFrz', 501);
+
+	SELECT * FROM devices WHERE dtoken = 'jUNweAKbsdfrcaUiKf0VkqRatGusYLi98c1zxSe7DFYso5TM5EBF78ztCcC8FRNIcgtAJUlsAsSe2YmYmiXTKcCAc7xUPG2lsPQHbTCKTJEePU1dqelWutxzesXbW0cu06mMIem3fMAB7XlSGU4bUFrz';
+
 -- 3) Given the user ID, visualize the user’s account information -
 
 	SELECT * FROM users WHERE id = 11;
@@ -61,8 +67,8 @@
 
 	SELECT * FROM usersPublished WHERE user_id = 40 AND published_send_date >= 0 ORDER BY published_send_date DESC;
 
--- 11) selezionare tutte le opere nello stesso luogo es festival --da aggiungere dati
+-- 11) selezionare tutte le opere nello stesso luogo es festival 
 
-	SELECT * FROM festival WHERE published_lat = [] AND published_lng = [];
+	SELECT * FROM festival WHERE published_lat = -2.6384 AND published_lng = 22.0455;
 
-	SELECT * FROM festival WHERE published_lat = [] AND published_lng = [] AND author_id = [];
+	SELECT * FROM festival WHERE published_lat = -2.6384 AND published_lng = 22.0455 AND author_id = 8;
