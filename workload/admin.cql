@@ -63,7 +63,7 @@
 
 -- 7) User ban
 
-	UPDATE users SET banned = 1 , ban_expiry = '' WHERE id = 45;
+	UPDATE users SET banned = 1 , ban_expiry = '1551456596000' WHERE id = 45;
 
 -- 8) search for banned user that still have at least one more week of ban?
 
