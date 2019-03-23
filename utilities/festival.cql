@@ -1,3 +1,5 @@
+-- sample data of street arts in the same location 
+
 INSERT INTO published (id, title, description, lat, lng, send_date, confirmation_date) VALUES (25001, 'Puppy Power!', 'Description example', -2.6384,22.0455, 1551456491000, 1551456606000);
 INSERT INTO authorsPublished (author_id, author_name, author_age, author_gender, author_status, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (8,'WD aka Wild Drawing',35,'M','RETIRED',25001, 'Puppy Power!', 'Description example',-2.6384,22.0455, 1551456491000, 1551456606000);
 INSERT INTO usersPublished (user_id, ban_expiry, banned, user_fb_token, user_gp_token, register_date, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (25, 0, 0,'10289656733128031', '49123721886759640',  '1551597653000', 25001, 'Puppy Power!', 'Description example', -2.6384,22.0455, 1551456491000, 1551456606000);
