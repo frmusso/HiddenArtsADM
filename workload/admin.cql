@@ -39,7 +39,7 @@
 
 	-- si deve cancellare da unpublished?? preferibilmente no (?)
 
--- 6) Given the reports status we search for the awaiting ones
+-- 6) Given the reports status we search for the awaiting ones -
 
 	SELECT * FROM reports WHERE status = 'AWAITING';
 
@@ -61,9 +61,8 @@
 
 	UPDATE reports SET status = 'CLOSED' WHERE report_id = 4;
 
--- 7) User ban
+-- 7) User ban -
 
 	UPDATE users SET banned = 1 , ban_expiry = '1551456596000' WHERE id = 45;
 
--- 8) search for banned user that still have at least one more week of ban?
 
