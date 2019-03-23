@@ -53,7 +53,7 @@ CREATE TABLE ks_user4.reports (
     status text
 );
 
-CREATE INDEX status_idx ON ks_user4.reports (status);
+CREATE INDEX reports_status_idx ON ks_user4.reports (status);
 
 CREATE TABLE ks_user4.authorsPublished (
     author_id int,
