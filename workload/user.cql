@@ -67,7 +67,7 @@
 
 	SELECT * FROM usersPublished WHERE user_id = 40 AND published_send_date >= 0 ORDER BY published_send_date DESC;
 
--- 11) selezionare tutte le opere nello stesso luogo es festival 
+-- 11) selezionare tutte le opere nello stesso luogo es festival -
 
 	SELECT * FROM festival WHERE published_lat = -2.6384 AND published_lng = 22.0455;
 
