@@ -53,7 +53,7 @@
 
 	UPDATE authorsPublished SET published_description = 'new description' WHERE published_id = 8251 AND published_send_date = '1551456467000';
 
-	UPDATE usersPublished SET published_description = 'new description' WHERE published_id = 8251  AND published_send_date = '1551456467000';
+	UPDATE usersPublished SET published_description = 'new description' WHERE published_id = 8251  AND published_send_date = '1551456467000' AND user_id = 30;
 
 	-- now we close the report
 
