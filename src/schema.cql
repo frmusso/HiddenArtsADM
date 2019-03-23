@@ -104,7 +104,7 @@ CREATE TABLE ks_user4.authorsUnpublished (
     unpublished_lat float,	
     unpublished_lng float,	
     unpublished_send_date timestamp,	
-    unpublished_confirmation_date timestamp -- da settare a zero nel dataset
+    unpublished_confirmation_date timestamp 
 );
 
 CREATE TABLE ks_user4.usersUnpublished (
@@ -120,7 +120,7 @@ CREATE TABLE ks_user4.usersUnpublished (
     unpublished_lat float,	
     unpublished_lng float,	
     unpublished_send_date timestamp,
-    unpublished_confirmation_date timestamp -- da settare a zero nel dataset	
+    unpublished_confirmation_date timestamp 	
 );
 
 CREATE TABLE ks_user4.reportsPublished (
@@ -152,6 +152,6 @@ CREATE TABLE ks_user4.festival ( -- i dati sono queli della tabella authorsPubli
     PRIMARY KEY((published_lat, published_lng), published_send_date, published_id))
     WITH CLUSTERING ORDER BY (published_send_date DESC);
 
-    CREATE INDEX author_id_idx ON ks_user4.festival (author_id);
+    CREATE INDEX festival_author_id_idx ON ks_user4.festival (author_id);
 
 
