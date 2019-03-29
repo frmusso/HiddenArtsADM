@@ -56,7 +56,7 @@
 
 	INSERT INTO reportsPublished (id, description, status, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (101, 'INCORRECT_NAME', 'AWAITING', 101, 'when Moving', 'Description example', 47.0765, 99.8497, 1551456416000, 1551456617000);
 
--- 10) opere published da user dopo una certa data o in un certo giorno -
+-- 10) opere published da user dopo una certa data o in un certo giorno 
 
 	SELECT * FROM usersPublished WHERE user_id = 348 AND published_send_date >= 1551446416000 AND published_send_date <= 1551456416000;
 

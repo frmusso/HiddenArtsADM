@@ -73,7 +73,7 @@ CREATE TABLE ks_user4.authorsPublished (
 
 CREATE INDEX author_id_idx ON ks_user4.authorsPublished (author_id);
 
-CREATE TABLE ks_user4.usersPublished ( -- da cambiare in published_id, published_send_date e cambiare index in user_id
+CREATE TABLE ks_user4.usersPublished ( 
     user_id int,
     ban_expiry timestamp,
     banned tinyint,
@@ -87,10 +87,10 @@ CREATE TABLE ks_user4.usersPublished ( -- da cambiare in published_id, published
     published_lng float,	
     published_send_date timestamp,	
     published_confirmation_date timestamp,
-    PRIMARY KEY((user_id), published_send_date, published_id)
+    PRIMARY KEY((published_id), published_send_date)
 );
 
-CREATE INDEX published_id_idx ON ks_user4.usersPublished (published_id);
+CREATE INDEX user_id_idx ON ks_user4.usersPublished (user_id);
 
 CREATE TABLE ks_user4.authorsUnpublished ( 
     author_id int,

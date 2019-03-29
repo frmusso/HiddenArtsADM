@@ -33,6 +33,8 @@
 
 	INSERT INTO authorsPublished (author_id, author_name, author_age int, author_gender, author_status, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (29, 'Jeroo', 47, 'M', 'RETIRED', 25005, 'Lost Fog', 'Description example', 34.7073,-6.1634, 1553356215000, 1553356225000);
 
+	INSERT INTO festival (author_id, author_name, author_age int, author_gender, author_status, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (29, 'Jeroo', 47, 'M', 'RETIRED', 25005, 'Lost Fog', 'Description example', 34.7073,-6.1634, 1553356215000, 1553356225000);
+
 	INSERT INTO usersPublished (user_id, ban_expiry, banned, user_fb_token, user_gp_token, register_date, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (355, '76254565417212669', '63747950862390305', 0, '0', '1551597653000', 25005, 'Lost Fog', 'Description example', 34.7073,-6.1634, 1553356215000, 1553356225000);
 	-- si deve cancellare da unpublished?? preferibilmente no (?)
 
@@ -48,7 +50,9 @@
 
 	UPDATE published SET description = 'new description' WHERE id = 8251;
 
-	UPDATE authorsPublished SET published_description = 'new description' WHERE published_id = 8251 AND published_send_date = '1551456467000'; --perchè ci sono gli apici nel send_date?
+	UPDATE authorsPublished SET published_description = 'new description' WHERE published_id = 8251 AND published_send_date = '1551456467000'; 
+
+	UPDATE festival SET published_description = 'new description' WHERE published_id = 8251 AND published_send_date = '1551456467000';
 
 	UPDATE usersPublished SET published_description = 'new description' WHERE published_id = 8251  AND published_send_date = '1551456467000' AND user_id = 30;
 
