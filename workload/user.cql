@@ -50,11 +50,11 @@
 
 	INSERT INTO usersUnpublished (user_id, ban_expiry, banned, user_fb_token, user_gp_token, register_date, unpublished_id, unpublished_title, unpublished_description, unpublished_lat, unpublished_lng, unpublished_send_date, unpublished_confirmation_date) VALUES (2, 0, 0, '52978759874549647', '31025093435374447', '1551462259000', 5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
 
--- 9) Compile a report --forse bisogna aggiungere user_id inn reportsPublished
+-- 9) Compile a report --forse bisogna aggiungere user_id inn reportsPublished -
 
 	INSERT INTO reports (id, description, status) VALUES (101, 'INCORRECT_NAME', 'AWAITING');
 
-	INSERT INTO reportsPublished (id, description, status, published_user_id, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (101, 'INCORRECT_NAME', 'AWAITING', 259, 101, 'when Moving', 'Description example', 47.0765, 99.8497, 1551456416000, 1551456617000);
+	INSERT INTO reportsPublished (report_id, report_description, report_status, published_user_id, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (101, 'INCORRECT_NAME', 'AWAITING', 259, 101, 'when Moving', 'Description example', 47.0765, 99.8497, 1551456416000, 1551456617000);
 
 -- 10) opere published da user dopo una certa data o in un certo giorno -
 
