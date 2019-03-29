@@ -56,6 +56,14 @@
 
 	UPDATE usersPublished SET published_description = 'new description' WHERE published_id = 8251  AND published_send_date = '1551456467000' AND user_id = 30;
 
+		-- UPDATE published SET description = 'Description example' WHERE id = 8251;
+
+		-- UPDATE authorsPublished SET published_description = 'Description example' WHERE published_id = 8251 AND published_send_date = '1551456467000'; 
+
+		-- UPDATE festival SET published_description = 'Description example' WHERE published_lat = 39.0813 AND published_lng = 68.5362 AND published_send_date = '1551456467000' AND published_id = 8251;
+
+		-- UPDATE usersPublished SET published_description = 'Description example' WHERE published_id = 8251  AND published_send_date = '1551456467000' AND user_id = 30;
+
 	-- now we close the report
 
 	UPDATE reportsPublished SET report_status = 'CLOSED' WHERE report_id = 4;
