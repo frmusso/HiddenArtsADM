@@ -1,7 +1,7 @@
 -- 1) Given all the admin’s information, create a unique account for an admin (or remove)
 
 	INSERT INTO admins (id, password, name, date_of_birth)
-	VALUES (3,'example_password', 'mrprop', 19901212) IF NOT EXISTS;
+	VALUES (3, 'example_password', 'zaino', 1553869569000) IF NOT EXISTS;
   	
   	
   	DELETE FROM admins WHERE id = 3;
