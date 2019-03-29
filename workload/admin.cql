@@ -1,29 +1,29 @@
--- 1) Given all the admin’s information, create a unique account for an admin (or remove)
+-- 1) Given all the admin’s information, create a unique account for an admin (or remove) -
 
 	INSERT INTO admins (id, password, name, date_of_birth)
-	VALUES (3, 'example_password', 'zaino', 1553869569000) IF NOT EXISTS;
+	VALUES (3, 'example_hashed_password', 'zaino', 1553869569000) IF NOT EXISTS;
   	
   	
   	DELETE FROM admins WHERE id = 3;
   	
--- 2) Log in, given the admin ID and the current password
+-- 2) Log in, given the admin ID and the current password -
 
 	-- The password validity is check at application level
 
 	SELECT * FROM admins WHERE id = 2;
 	
--- 3) Change the password, given the admin ID, the old password and the new one
+-- 3) Change the password, given the admin ID, the old password and the new one -
 
 	-- The old password validity is check at application level as query 2)
 	-- new_password is meant to be hashed
 
 	UPDATE admins SET password = 'new_password' WHERE id = 2;
 
--- 4) Given the admin ID, visualize the admin’s account information
+-- 4) Given the admin ID, visualize the admin’s account information -
 
 	SELECT * FROM admins WHERE id = 1;
 
--- 5) Given the unpublished id, the admin checks if it is compliant 
+-- 5) Given the unpublished id, the admin checks if it is compliant -
 
 	SELECT * FROM unpublished WHERE id = 1;
 
@@ -40,8 +40,8 @@
 	-- now delete from unpublished
 
 	DELETE FROM unpublished WHERE id = 1;
-	DELETE FROM authorsUnpublished WHERE id = 1;
-	DELETE FROM usersUnpublished WHERE id = 1;
+	DELETE FROM authorsUnpublished WHERE unpublished_id = 1;
+	DELETE FROM usersUnpublished WHERE unpublished_id = 1;
 
 -- 6) Given the reports status we search for the awaiting ones -
 

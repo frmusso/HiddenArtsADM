@@ -46,9 +46,9 @@
 
 	INSERT INTO unpublished (id, title, description, lat, lng, send_date, confirmation_date) VALUES (5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
 
-	INSERT INTO authorsUnpublished (author_id, author_name, author_age int, author_gender, author_status, unpublished_id, unpublished_title, unpublished_description, unpublished_lat, unpublished_lng, unpublished_send_date, unpublished_confirmation_date) VALUES (1, 'Li-Hill', 29, 'F', 'RETIRED', 5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
+	INSERT INTO authorsUnpublished (author_id, author_name, author_age, author_gender, author_status, unpublished_id, unpublished_title, unpublished_description, unpublished_lat, unpublished_lng, unpublished_send_date, unpublished_confirmation_date) VALUES (1, 'Li-Hill', 29, 'F', 'RETIRED', 5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
 
-	INSERT INTO usersUnpublished (user_id, ban_expiry, banned, user_fb_token, user_gp_token, register_date, unpublished_id, unpublished_title, unpublished_description, unpublished_lat, unpublished_lng, unpublished_send_date, unpublished_confirmation_date) VALUES (2, '52978759874549647', '31025093435374447', 0, '0', '1551462259000', 5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
+	INSERT INTO usersUnpublished (user_id, ban_expiry, banned, user_fb_token, user_gp_token, register_date, unpublished_id, unpublished_title, unpublished_description, unpublished_lat, unpublished_lng, unpublished_send_date, unpublished_confirmation_date) VALUES (2, 0, 0, '52978759874549647', '31025093435374447', '1551462259000', 5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
 
 -- 9) Compile a report --forse bisogna aggiungere user_id inn reportsPublished
 
