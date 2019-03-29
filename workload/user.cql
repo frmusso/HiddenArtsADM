@@ -42,7 +42,7 @@
 
 	SELECT * FROM authors WHERE status = 'ACTIVE';
 
--- 8) insert a new art
+-- 8) insert a new art -
 
 	INSERT INTO unpublished (id, title, description, lat, lng, send_date, confirmation_date) VALUES (5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
 
@@ -54,7 +54,7 @@
 
 	INSERT INTO reports (id, description, status) VALUES (101, 'INCORRECT_NAME', 'AWAITING');
 
-	INSERT INTO reportsPublished (id, description, status, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (101, 'INCORRECT_NAME', 'AWAITING', 101, 'when Moving', 'Description example', 47.0765, 99.8497, 1551456416000, 1551456617000);
+	INSERT INTO reportsPublished (id, description, status, published_user_id, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (101, 'INCORRECT_NAME', 'AWAITING', 259, 101, 'when Moving', 'Description example', 47.0765, 99.8497, 1551456416000, 1551456617000);
 
 -- 10) opere published da user dopo una certa data o in un certo giorno -
 
