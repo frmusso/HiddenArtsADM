@@ -87,10 +87,10 @@ CREATE TABLE ks_user4.usersPublished (
     published_lng float,	
     published_send_date timestamp,	
     published_confirmation_date timestamp,
-    PRIMARY KEY((published_id), published_send_date)
+    PRIMARY KEY((user_id), published_send_date, published_id)
 );
 
-CREATE INDEX user_id_idx ON ks_user4.usersPublished (user_id);
+CREATE INDEX published_id_idx ON ks_user4.usersPublished (published_id);
 
 CREATE TABLE ks_user4.authorsUnpublished ( 
     author_id int,
@@ -127,6 +127,7 @@ CREATE TABLE ks_user4.reportsPublished (
     report_id int PRIMARY KEY,
     report_description text,
     report_status text,
+    published_user_id int,
     published_id int,	
     published_title text,	
     published_description text,	
