@@ -9,8 +9,12 @@ CREATE TABLE ks_user4.users (
     register_date timestamp
 );
 
-CREATE INDEX users_gp_token_idx ON ks_user4.users (gp_token);
-CREATE INDEX users_fb_token_idx ON ks_user4.users (fb_token);
+CREATE TABLE ks_user4.admins (
+    id int PRIMARY KEY,
+    password text,
+    name text,
+    date_of_birth timestamp,
+);
 
 CREATE TABLE ks_user4.authors (
     id int PRIMARY KEY,
