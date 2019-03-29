@@ -40,7 +40,9 @@
 	-- now delete from unpublished
 
 	DELETE FROM unpublished WHERE id = 1;
+
 	DELETE FROM authorsUnpublished WHERE unpublished_id = 1;
+	
 	DELETE FROM usersUnpublished WHERE unpublished_id = 1;
 
 -- 6) Given the reports status we search for the awaiting ones -
