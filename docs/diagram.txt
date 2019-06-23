@@ -1,0 +1,173 @@
+Table "users" {
+  "id" int PK
+  "ban_expiry" timestamp
+  "banned" tinyint
+  "fb_token" text
+  "gp_token" text
+  "register_date" timestamp
+}
+
+Table "admins" {
+  "id" int PK
+  "password" text
+  "name" text
+  "date_of_birth" timestamp
+}
+
+Table "authors" {
+  "id" int PK
+  "name" text
+  "age" int
+  "gender" text
+  "status" text
+}
+
+Table "devices" {
+  "dtoken" text PK
+  "user_id" int
+}
+
+Table "published" {
+  "id" int PK
+  "title" text
+  "description" text
+  "lat" float
+  "lng" float
+  "send_date" timestamp
+  "confirmation_date" timestamp
+}
+
+Table "unpublished" {
+  "id" int PK
+  "title" text
+  "description" text
+  "lat" float
+  "lng" float
+  "send_date" timestamp
+  "confirmation_date" timestamp
+}
+
+Table "reports" {
+  "id" int PK
+  "description" text
+  "status" text
+}
+
+Table "authorsPublished" {
+  "author_id" int 
+  "author_name" text
+  "author_age" int
+  "author_gender" text
+  "author_status" text
+  "published_id" int PK
+  "published_title" text
+  "published_description" text
+  "published_lat" float
+  "published_lng" float
+  "published_send_date" timestamp PK
+  "published_confirmation_date" timestamp
+}
+
+Table "usersPublished" {
+  "user_id" int PK
+  "ban_expiry" timestamp
+  "banned" tinyint
+  "user_fb_token" text
+  "user_gp_token" text
+  "register_date" timestamp
+  "published_id" int PK
+  "published_title" text
+  "published_description" text
+  "published_lat" float
+  "published_lng" float
+  "published_send_date" timestamp PK
+  "published_confirmation_date" timestamp
+}
+
+Table "authorsUnpublished" {
+  "author_id" int
+  "author_name" text
+  "author_age" int
+  "author_gender" text
+  "author_status" text
+  "unpublished_id" int PK
+  "unpublished_title" text
+  "unpublished_description" text
+  "unpublished_lat" float
+  "unpublished_lng" float
+  "unpublished_send_date" timestamp
+  "unpublished_confirmation_date" timestamp
+}
+
+Table "usersUnpublished" {
+  "user_id" int
+  "ban_expiry" timestamp
+  "banned" tinyint
+  "user_fb_token" text
+  "user_gp_token" text
+  "register_date" timestamp
+  "unpublished_id" int PK
+  "unpublished_title" text
+  "unpublished_description" text
+  "unpublished_lat" float
+  "unpublished_lng" float
+  "unpublished_send_date" timestamp
+  "unpublished_confirmation_date" timestamp
+}
+
+Table "reportsPublished" {
+  "report_id" int PK
+  "report_description" text
+  "report_status" text
+  "published_user_id" int
+  "published_id" int
+  "published_title" text
+  "published_description" text
+  "published_lat" float
+  "published_lng" float
+  "published_send_date" timestamp
+  "published_confirmation_date" timestamp
+}
+
+Table "festival" {
+  "author_id" int
+  "author_name" text
+  "author_age" int
+  "author_gender" text
+  "author_status" text
+  "published_id" int PK
+  "published_title" text
+  "published_description" text
+  "published_lat" float PK
+  "published_lng" float PK
+  "published_send_date" timestamp PK
+  "published_confirmation_date" timestamp 
+}
+
+
+
+Ref: "unpublished"."id" < "authorsUnpublished"."unpublished_id"
+
+Ref: "unpublished"."id" < "usersUnpublished"."unpublished_id"
+
+Ref: "published"."id" < "usersPublished"."published_id"
+
+Ref: "published"."id" < "authorsPublished"."published_id"
+
+Ref: "published"."id" < "festival"."published_id"
+
+Ref: "published"."id" < "reportsPublished"."published_id"
+
+Ref: "reports"."id" < "reportsPublished"."report_id"
+
+Ref: "users"."id" < "usersPublished"."user_id"
+
+Ref: "users"."id" < "usersUnpublished"."user_id"
+
+Ref: "devices"."user_id" < "users"."id"
+
+Ref: "authors"."id" < "authorsPublished"."author_id"
+
+Ref: "authors"."id" < "authorsUnpublished"."author_id"
+
+Ref: "festival"."author_id" < "authors"."id"
