@@ -27,7 +27,7 @@
 
 	SELECT * FROM unpublished WHERE id = 1;
 
-	-- If compliant, at application level the data are copied for the insert
+	-- If compliant, at application level the data are copied for the insert -
 
 	INSERT INTO published (id, title, description, lat, lng, send_date, confirmation_date) VALUES (25005, 'Lost Fog', 'Description example', 34.7073,-6.1634, 1553356215000, 1553356225000);
 
@@ -37,7 +37,7 @@
 
 	INSERT INTO usersPublished (user_id, ban_expiry, banned, user_fb_token, user_gp_token, register_date, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (355, 0, 0, '76254565417212669', '63747950862390305', '1551597653000', 25005, 'Lost Fog', 'Description example', 34.7073,-6.1634, 1553356215000, 1553356225000);
 	
-	-- now delete from unpublished
+	-- now delete from unpublished -
 
 	DELETE FROM unpublished WHERE id = 1;
 
@@ -49,7 +49,7 @@
 
 	SELECT * FROM reports WHERE status = 'AWAITING';
 
-	-- we chose one of the awaiting ones and we analyze it
+	-- we chose one of the awaiting ones and we analyze it -
 
 	UPDATE reportsPublished SET report_status = 'ACTIVE' WHERE report_id = 4;
 
@@ -57,7 +57,7 @@
 
 	SELECT * FROM reportsPublished WHERE report_id = 4;
 
-	-- If the report is correct we do the update
+	-- If the report is correct we do the update -
 
 	UPDATE published SET description = 'new description' WHERE id = 8251;
 
@@ -75,7 +75,7 @@
 
 		-- UPDATE usersPublished SET published_description = 'Description example' WHERE published_id = 8251  AND published_send_date = '1551456467000' AND user_id = 30;
 
-	-- now we close the report
+	-- now we close the report -
 
 	UPDATE reportsPublished SET report_status = 'CLOSED' WHERE report_id = 4;
 

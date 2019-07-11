@@ -34,11 +34,11 @@
 
 	SELECT * FROM authorsPublished WHERE author_id = 26;
 
--- 6) retrive the latest art of an author -
+-- 6) retrieve the latest art of an author -
 
 	SELECT * FROM authorsPublished WHERE author_id = 28 LIMIT 1;
 
--- 7) retrive the authors who are still active -
+-- 7) retrieve the authors who are still active -
 
 	SELECT * FROM authors WHERE status = 'ACTIVE';
 
@@ -50,19 +50,19 @@
 
 	INSERT INTO usersUnpublished (user_id, ban_expiry, banned, user_fb_token, user_gp_token, register_date, unpublished_id, unpublished_title, unpublished_description, unpublished_lat, unpublished_lng, unpublished_send_date, unpublished_confirmation_date) VALUES (2, 0, 0, '52978759874549647', '31025093435374447', '1551462259000', 5001, 'Little Chef', 'Description example', 53.0067, 67.378, 1551466481000, 0);
 
--- 9) Compile a report --forse bisogna aggiungere user_id inn reportsPublished -
+-- 9) Compile a report -
 
 	INSERT INTO reports (id, description, status) VALUES (101, 'INCORRECT_NAME', 'AWAITING');
 
 	INSERT INTO reportsPublished (report_id, report_description, report_status, published_user_id, published_id, published_title, published_description, published_lat, published_lng, published_send_date, published_confirmation_date) VALUES (101, 'INCORRECT_NAME', 'AWAITING', 259, 101, 'when Moving', 'Description example', 47.0765, 99.8497, 1551456416000, 1551456617000);
 
--- 10) opere published da user dopo una certa data o in un certo giorno -
+-- 10) published art from user after a specific date -
 
 	SELECT * FROM usersPublished WHERE user_id = 348 AND published_send_date >= 1551446416000 AND published_send_date <= 1551456416000;
 
 	SELECT * FROM usersPublished WHERE user_id = 40 AND published_send_date >= 0 ORDER BY published_send_date DESC;
 
--- 11) selezionare tutte le opere nello stesso luogo es festival -
+-- 11) select all arts on the same location (festival) -
 
 	SELECT * FROM festival WHERE published_lat = -2.6384 AND published_lng = 22.0455;
 
